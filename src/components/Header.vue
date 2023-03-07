@@ -57,10 +57,27 @@
                 <input class="header-input" type="text" placeholder="Cerca il film o la serie tv">
                 <button class="header-button"> Cerca </button>
             </div>
+
+            <ul>
+                <li>
+                    <h2>Film:</h2>
+                    <h3>{{  }}</h3>
+                </li>
+            </ul>
         </div>  
     </header>
 </template>
 
 <style lang="scss" scoped>
-    
+     .header-input{
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .header-button{
+        padding: 10px 15px;
+        margin-left: 20px;
+        background-color: black;
+        color: white;
+    }
 </style>
