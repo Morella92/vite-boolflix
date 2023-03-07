@@ -1,26 +1,12 @@
 <template>
+  <header class="header">
+    <div class="container">
+      <Header @search="fetchMovies" />
+    </div>
+  </header>
   <div class="container">
-    <Header @search="fetchMovies" />
     <div v-if="movies.length > 0 || series.length > 0">
-      <h2>Film:</h2>
-      <ul>
-        <li v-for="movie in movies" :key="movie.id">
-          <h3>{{ movie.title }}</h3>
-          <p>Titolo originale: {{ movie.original_title }}</p>
-          <p>Lingua: {{ movie.original_language }}</p>
-          <p>Voto: {{ movie.vote_average }}</p>
-        </li>
-      </ul>
-  
-      <h2>Serie TV:</h2>
-      <ul>
-        <li v-for="serie in series" :key="serie.id">
-          <h3>{{ serie.name }}</h3>
-          <p>Titolo originale: {{ serie.original_name }}</p>
-          <p>Lingua: {{ serie.original_language }}</p>
-          <p>Voto: {{ serie.vote_average }}</p>
-        </li>
-      </ul>
+      <Movie :movies="movies" :series="series"/>
     </div>
   </div>
 </template>
@@ -28,10 +14,12 @@
 <script>
   import Header from './components/Header.vue';
   import axios from 'axios';
+  import Movie from './components/Movie.vue'
 
   export default {
     components: {
-      Header
+      Header, 
+      Movie
     },
     data() {
       return {
@@ -61,5 +49,10 @@
 
 
 <style lang="scss">
-  @use './style/general.scss'
+  @use './style/general.scss';
+
+  .header{
+    background-color: rgb(73, 70, 70);
+    min-height: 70px;
+  }
 </style>
