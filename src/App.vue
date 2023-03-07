@@ -52,7 +52,7 @@
   @use './style/general.scss';
 
   .header{
-    background-color: rgb(73, 70, 70);
+    background-color: black;
     min-height: 70px;
   }
 </style>

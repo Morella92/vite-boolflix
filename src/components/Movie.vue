@@ -1,6 +1,5 @@
 <template>
-    <h2>Film:</h2>
-    <ul>
+    <ul class="grid">
         <li v-for="movie in movies" :key="movie.id">
             <h3>{{ movie.title }}</h3>
             <p>Titolo originale: {{ movie.original_title }}</p>
@@ -9,8 +8,7 @@
         </li>
     </ul>
   
-    <h2>Serie TV:</h2>
-    <ul>
+    <ul class="grid">
         <li v-for="serie in series" :key="serie.id">
             <h3>{{ serie.name }}</h3>
             <p>Titolo originale: {{ serie.original_name }}</p>
@@ -35,5 +33,10 @@
 
 
 <style lang="scss" scoped>
-
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 30px;
+        margin-top: 30px;
+    }
 </style>
