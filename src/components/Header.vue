@@ -2,7 +2,7 @@
    <div class="flex-container">
         <h1 class="header-logo">boolflix</h1>
         <div class="search-bar">
-            <input class="header-input" type="text" v-model="userSearch" placeholder="Cerca il film o la serie tv">
+            <input class="header-input" type="text" v-model="userSearch" @keyup.enter="searchClicked" placeholder="Cerca il film o la serie tv">
             <button class="header-button" @click="searchClicked"> Cerca </button>
         </div>
     </div>
