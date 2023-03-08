@@ -4,7 +4,7 @@
       <Header @search="fetchMovies"/>
     </div>
   </header>
-  <main>
+  <main class="main">
     <div class="container">
       <div v-if="movies.length > 0 || series.length > 0">
         <Movie :movies="movies" :series="series"/>
@@ -61,5 +61,9 @@
   .header{
     background-color: black;
     min-height: 70px;
+  }
+
+  .main{
+    background-color: rgb(39, 36, 36);
   }
 </style>
