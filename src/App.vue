@@ -63,7 +63,7 @@
     min-height: 70px;
   }
 
-  .main{
+  body{
     background-color: rgb(39, 36, 36);
   }
 </style>
